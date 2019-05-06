@@ -1,0 +1,77 @@
+{% set menu = [
+	{"name": "Home",
+	 "href": "index.html"
+	},
+	{"name": "About",
+	 "href": "about.html"
+	},
+	{"name": "Blog",
+	 "href": "blog.html"
+	},
+	{"name": "Contact",
+	 "href": "contact.html"
+	}
+]%}
+
+{% set filters = [
+	{"name": "filter1"},
+	{"name": "filter2"},
+	{"name": "filter3"},
+	{"name": "filter4"},
+	{"name": "filter5"},
+	{"name": "filter6"}
+]%}
+
+<div class="sidebar">
+	<div class="sidebar__inner">
+
+		<div class="sidebar__logo">
+			<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+		</div>
+		
+		<div class="sidebar__menu-toggle js-mm-toggle">
+			<button class="main_menu__item main_menu__item-menu">Menu</button>
+		</div>
+		<!-- /.sidebar__menu-toggle -->
+
+		<nav class="sidebar__menu js-mm">
+			<ul class="main_menu">
+				{% for li in menu %}
+					<li>
+						<a class="main_menu__item js-mm-item" href={{li.href}}>
+							{{li.name}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+		<!-- /.sidebar__logo -->
+
+		<div class="sidebar__filter">
+			<div class="filter">
+				<h4 class="h4">
+					Filter <i class="icon-th-large"></i>
+				</h4>
+				<ul class="filter__inner">
+					{% for li in filters %}
+						<li class="filter__item">{{li.name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!-- /.sidebar__filter -->
+		
+		<div class="sidebar__socials">
+			{% include "../partials/_socials.njk" %}
+		</div>
+		<!-- /.sidebar__socials -->
+
+		<div class="sidebar__rights">
+			<p class="rights">&copy; 20?? Company Name, All Rights Reserved</p>
+		</div>
+		<!-- /.sidebar__rights -->
+
+	</div>
+	<!-- /.sidebar__inner -->
+</div>
+<!-- /.sidebar -->

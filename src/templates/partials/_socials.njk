@@ -1,0 +1,31 @@
+{% set socials = [
+	{"name": "flickr",
+	 "href": "#"
+	},
+	{"name": "gplus",
+	 "href": "#"
+	},
+	{"name": "twitter",
+	 "href": "#"
+	},
+	{"name": "pinterest",
+	 "href": "#"
+	},
+	{"name": "dribbble",
+	 "href": "#"
+	},
+	{"name": "behance",
+	 "href": "#"
+	},
+	{"name": "facebook",
+	 "href": "#"
+	}
+]%}
+
+<div class="socials">
+	{% for social in socials %}
+		<a class="socials__item socials__item-{{social.name}}" href={{social.href}}>
+			<i class="icon-{{social.name}}"></i>
+		</a>
+	{% endfor %}
+</div>

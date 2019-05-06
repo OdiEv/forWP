@@ -1,0 +1,143 @@
+.sidebar
+	position: fixed
+	top: 0
+	left: 0
+	box-shadow: 0 0 100px 0 #000
+	z-index: 1
+	+r(768)
+		position: relative
+	&__inner
+		width: 300px
+		height: 100vh
+		background-color: $color_bg-1
+		overflow: auto
+		+r(768)
+			width: 100%
+			height: auto
+	&__logo
+		padding: 30px 0
+		text-align: center
+		background-color: #fff
+	&__menu
+		text-align: right
+		+r(768)
+			display: none
+			text-align: center
+		&-toggle
+			text-align: center
+			display: none
+			+r(768)
+				display: block
+	&__filter
+		text-align: right
+	&__socials
+		padding: 15px
+		+r(768)
+			display: none
+	&__rights
+		padding: 10px 20px
+		text-align: right
+		+r(768)
+			display: none
+
+.main_menu
+	&__item
+		position: relative
+		display: block
+		padding: 20px
+		color: #fff
+		font-size: 18px
+		font-weight: 300
+		text-transform: uppercase
+		z-index: 1
+		+g(lighten(#000, 20%), lighten(#000, 25%))
+		&.active
+			+g(darken($color_main, 20%), darken($color_main, 25%))
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			transform: scaleX(0)
+			transform-origin: 0 50%
+			transition: transform 0.2s ease-out
+			z-index: -1
+			+g(darken($color_main, 10%), darken($color_main, 20%))
+		&:hover
+			&:before
+				transform: scaleX(1)
+		&-menu
+			width: 100%
+
+
+.filter
+	padding: 20px
+	border-bottom: 2px solid #1e282b
+	+r(768)
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		padding: 10px
+	.h4
+		margin-bottom: 10px
+		font-size: 19px
+		font-weight: 100
+		color: $color_main
+		+r(768)
+			margin-bottom: 0
+	&__inner
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		+r(768)
+			flex-direction: row
+	&__item
+		font-size: 13px
+		font-weight: 300
+		line-height: 24px
+		color: $color_text
+		cursor: pointer
+		transition: color 0.2s ease-out
+		&:hover
+			color: #fff
+		+r(768)
+			margin-left: 5px
+
+.socials
+	display: flex
+	justify-content: flex-end
+	flex-wrap: wrap
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 5px
+		width: 24px
+		height: 24px
+		margin-left: 10px
+		border-radius: 4px
+		transition: transform 0.1s ease
+		&-flickr
+			color: #0066cc
+			background-color: #fff
+		&-gplus
+			background-color: #dc6330
+		&-twitter
+			background-color: #46caed
+		&-pinterest
+			background-color: #ef2c1d
+		&-dribbble
+			background-color: #ff80ca
+		&-behance
+			background-color: #46caed
+		&-facebook
+			background-color: #4163a7
+		&:hover
+			transform: scale(1.2)
+
+.rights
+	font-size: 12px
+	font-weight: 100
+	color: $color_text

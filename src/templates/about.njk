@@ -1,0 +1,103 @@
+---
+title: Company Name | About
+---
+
+{% extends "./layouts/_layout.njk" %}
+
+{% block content %}
+
+	{% set staff = [
+		{"img": "staff_1.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		},
+		{"img": "staff_2.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		},
+		{"img": "staff_3.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		},
+		{"img": "staff_4.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		},
+		{"img": "staff_5.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		},
+		{"img": "staff_6.jpg",
+		 "name": "John Smith",
+		 "position": "Web Developer"
+		}
+	]%}
+
+	<div class="about">
+		<div class="about__inner">
+
+			<div class="about__column">
+
+				<div class="about__image">
+					<div class="about__image-inner">
+						<img class="about__image-photo" src="img/team.jpg" alt="team">
+					</div>
+					<!-- /.about__image-inner -->
+				</div>
+				<!-- /.about__image -->
+
+				<div class="about__team">
+					<h3 class="h3">
+						Who We Are
+					</h3>
+					<p class="about__team-info">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim commodi quisquam nam ut omnis delectus optio nostrum tempora, vero blanditiis consequuntur magnam. Consequatur iure ad praesentium laboriosam. Fuga voluptatem mollitia deserunt similique incidunt optio amet recusandae consequatur cum magnam! Totam neque enim molestiae animi expedita at vitae architecto impedit praesentium!
+					</p>
+					<!-- /.about__team-info -->
+					<p class="about__team-info">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsam, tenetur doloribus porro nesciunt natus, repellendus iusto dolorem ratione ab corporis vero reiciendis dolor provident explicabo accusantium illo odit quaerat veniam sint. Ipsum quam autem, inventore excepturi quos, eum omnis.
+					</p>
+					<!-- /.about__team-info -->
+				</div>
+				<!-- /.about__team -->
+
+				<div class="about__staff">
+					<h3 class="h3">
+						Our Staff
+					</h3>
+					<div class="staff">
+						{% for item in staff %}
+							<div class="staff__item">
+								<div class="staff__item-outer">
+									<div class="staff__item-inner">
+										<div class="staff__item-info">
+											<h4 class="h4">{{item.name}}</h4>
+											<p>{{item.position}}</p>
+										</div>
+										<!-- /.staff__item-info -->
+										<img src="img/{{item.img}}" alt="staff" class="staff__item-image">
+									</div>
+									<!-- /.staff__item-inner -->
+								</div>
+								<!-- /.staff__item-outer -->
+							</div>
+							<!-- /.staff__item -->
+						{% endfor %}
+					</div>
+					<!-- /.staff -->
+				</div>
+				<!-- /.about__staff -->
+
+			</div>
+			<!-- /.about__column -->
+
+			<div class="about__column">
+				
+			</div>
+			<!-- /.about__column -->
+		</div>
+		<!-- /.about__inner -->
+	</div>
+	<!-- /.about -->
+
+{% endblock %}
