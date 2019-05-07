@@ -8,31 +8,22 @@ $(document).ready( function () {
 	const footer = $('.js-footer');
 	const mainMenu = $('.js-mm');
 	const mainMenuToggle = $('.js-mm-toggle');
+	const filterBar = $('.js-filter');
 
 	mainMenuItem.each(function() {
 		if (urlPage == (this.href)) {
 			$(this).addClass('active');
+		}
+		if (urlPage.indexOf('index.html') > -1) {
+			filterBar.css('display', 'block');
+		} else {
+			filterBar.css('display', 'none');
 		}
 	});
 
 	mainMenuToggle.click(function(){
 		mainMenu.slideToggle();
 	});
-
-// // ----------------ScrollWidth-------------------
-
-// 	var div = document.createElement('div');
-
-// 	div.style.overflowY = 'scroll';
-// 	div.style.width = '50px';
-// 	div.style.height = '50px';
-// 	div.style.visibility = 'hidden';
-
-// 	document.body.appendChild(div);
-// 	var scrollWidth = div.offsetWidth - div.clientWidth;
-// 	document.body.removeChild(div);
-
-// // -----------------------------------------------
 
 	if ($(window).width() < 768) {
 		body.css('padding-bottom', footer.height());
@@ -54,4 +45,41 @@ $(document).ready( function () {
 
   });
 
+//------------------Filter---------------------------
+  
+  const btnContainer = document.getElementById("myBtnContainer");
+  const btns = btnContainer.getElementsByClassName("js-filter-btn");
+  const x = document.getElementsByClassName("js-portfolio");
+
+  function w3AddClass(element, name) {
+    const arr1 = element.className.split(" ");
+    const arr2= name.split(" ");
+    for (let i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+
+  function w3RemoveClass(element, name) {
+    const arr1 = element.className.split(" ");
+    const arr2 = name.split(" ");
+    for (let i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      const current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
+      for (let j = 0; j < x.length; j++) {
+        w3RemoveClass(x[j], "show");
+        if (x[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(x[j], "show")
+      }
+    });
+  }
 });

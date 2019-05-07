@@ -55,19 +55,19 @@
           </nav>
           <!-- /.sidebar__logo -->
 
-          <div class="sidebar__filter">
+          <div class="sidebar__filter js-filter">
             <div class="filter">
               <h4 class="h4">
                 Filter <i class="icon-th-large"></i>
               </h4>
-              <ul class="filter__inner">
-                <li class="filter__item">filter1</li>
-                <li class="filter__item">filter2</li>
-                <li class="filter__item">filter3</li>
-                <li class="filter__item">filter4</li>
-                <li class="filter__item">filter5</li>
-                <li class="filter__item">filter6</li>
-              </ul>
+              <div class="filter__inner" id="myBtnContainer">
+                <button class="filter__item js-filter-btn" data-filter="all">all</button>
+                <button class="filter__item js-filter-btn" data-filter="filter1">filter1</button>
+                <button class="filter__item js-filter-btn" data-filter="filter2">filter2</button>
+                <button class="filter__item js-filter-btn" data-filter="filter3">filter3</button>
+                <button class="filter__item js-filter-btn" data-filter="filter4">filter4</button>
+                <button class="filter__item js-filter-btn" data-filter="filter5">filter5</button>
+              </div>
             </div>
           </div>
           <!-- /.sidebar__filter -->
@@ -114,7 +114,7 @@
       <div class="portfolio">
         <div class="portfolio__inner">
 
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter1 filter2 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -132,7 +132,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter2 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -150,7 +150,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter3 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -168,7 +168,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter4 filter1 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -186,7 +186,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter5 filter4 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -204,7 +204,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter1 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -222,7 +222,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter2 filter5 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -240,7 +240,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter3 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -258,7 +258,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter4 filter3 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -276,7 +276,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter5 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -294,7 +294,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter1 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -312,7 +312,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter2 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">
@@ -330,97 +330,7 @@
             <!-- /.portfolio__item-outer -->
           </div>
           <!-- /.portfolio__item -->
-          <div class="portfolio__item">
-            <div class="portfolio__item-outer">
-              <div class="portfolio__item-inner">
-                <div class="portfolio__item-info">
-                  <h4 class="h4">Cool App Design</h4>
-                  <p>development, mobile</p>
-                  <div class="portfolio__item-click">
-                    <i class="icon-right-big"></i>
-                  </div>
-                </div>
-                <!-- /.portfolio__info -->
-                <img class="portfolio__item-image" src="img/work_3.jpg" alt="work">
-              </div>
-              <!-- /.portfolio__item-inner -->
-            </div>
-            <!-- /.portfolio__item-outer -->
-          </div>
-          <!-- /.portfolio__item -->
-          <div class="portfolio__item">
-            <div class="portfolio__item-outer">
-              <div class="portfolio__item-inner">
-                <div class="portfolio__item-info">
-                  <h4 class="h4">Cool App Design</h4>
-                  <p>development, mobile</p>
-                  <div class="portfolio__item-click">
-                    <i class="icon-right-big"></i>
-                  </div>
-                </div>
-                <!-- /.portfolio__info -->
-                <img class="portfolio__item-image" src="img/work_4.jpg" alt="work">
-              </div>
-              <!-- /.portfolio__item-inner -->
-            </div>
-            <!-- /.portfolio__item-outer -->
-          </div>
-          <!-- /.portfolio__item -->
-          <div class="portfolio__item">
-            <div class="portfolio__item-outer">
-              <div class="portfolio__item-inner">
-                <div class="portfolio__item-info">
-                  <h4 class="h4">Cool App Design</h4>
-                  <p>development, mobile</p>
-                  <div class="portfolio__item-click">
-                    <i class="icon-right-big"></i>
-                  </div>
-                </div>
-                <!-- /.portfolio__info -->
-                <img class="portfolio__item-image" src="img/work_5.jpg" alt="work">
-              </div>
-              <!-- /.portfolio__item-inner -->
-            </div>
-            <!-- /.portfolio__item-outer -->
-          </div>
-          <!-- /.portfolio__item -->
-          <div class="portfolio__item">
-            <div class="portfolio__item-outer">
-              <div class="portfolio__item-inner">
-                <div class="portfolio__item-info">
-                  <h4 class="h4">Cool App Design</h4>
-                  <p>development, mobile</p>
-                  <div class="portfolio__item-click">
-                    <i class="icon-right-big"></i>
-                  </div>
-                </div>
-                <!-- /.portfolio__info -->
-                <img class="portfolio__item-image" src="img/work_1.jpg" alt="work">
-              </div>
-              <!-- /.portfolio__item-inner -->
-            </div>
-            <!-- /.portfolio__item-outer -->
-          </div>
-          <!-- /.portfolio__item -->
-          <div class="portfolio__item">
-            <div class="portfolio__item-outer">
-              <div class="portfolio__item-inner">
-                <div class="portfolio__item-info">
-                  <h4 class="h4">Cool App Design</h4>
-                  <p>development, mobile</p>
-                  <div class="portfolio__item-click">
-                    <i class="icon-right-big"></i>
-                  </div>
-                </div>
-                <!-- /.portfolio__info -->
-                <img class="portfolio__item-image" src="img/work_2.jpg" alt="work">
-              </div>
-              <!-- /.portfolio__item-inner -->
-            </div>
-            <!-- /.portfolio__item-outer -->
-          </div>
-          <!-- /.portfolio__item -->
-          <div class="portfolio__item">
+          <div class="portfolio__item js-portfolio filter3 show">
             <div class="portfolio__item-outer">
               <div class="portfolio__item-inner">
                 <div class="portfolio__item-info">

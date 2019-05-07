@@ -7,31 +7,52 @@ title: Company Name
 {% block content %}
 
 	{% set works = [
-		{"img": "work_1.jpg"},
-		{"img": "work_2.jpg"},
-		{"img": "work_3.jpg"},
-		{"img": "work_4.jpg"},
-		{"img": "work_5.jpg"},
-		{"img": "work_1.jpg"},
-		{"img": "work_2.jpg"},
-		{"img": "work_3.jpg"},
-		{"img": "work_4.jpg"},
-		{"img": "work_5.jpg"},
-		{"img": "work_1.jpg"},
-		{"img": "work_2.jpg"},
-		{"img": "work_3.jpg"},
-		{"img": "work_4.jpg"},
-		{"img": "work_5.jpg"},
-		{"img": "work_1.jpg"},
-		{"img": "work_2.jpg"},
-		{"img": "work_3.jpg"}
+		{"img": "work_1.jpg",
+		 "filter": "filter1 filter2"
+		},
+		{"img": "work_2.jpg",
+		 "filter": "filter2"
+		},
+		{"img": "work_3.jpg",
+		 "filter": "filter3"
+		},
+		{"img": "work_4.jpg",
+		 "filter": "filter4 filter1"
+		},
+		{"img": "work_5.jpg",
+		 "filter": "filter5 filter4"
+		},
+		{"img": "work_1.jpg",
+		 "filter": "filter1"
+		},
+		{"img": "work_2.jpg",
+		 "filter": "filter2 filter5"
+		},
+		{"img": "work_3.jpg",
+		 "filter": "filter3"
+		},
+		{"img": "work_4.jpg",
+		 "filter": "filter4 filter3"
+		},
+		{"img": "work_5.jpg",
+		 "filter": "filter5"
+		},
+		{"img": "work_1.jpg",
+		 "filter": "filter1"
+		},
+		{"img": "work_2.jpg",
+		 "filter": "filter2"
+		},
+		{"img": "work_3.jpg",
+		 "filter": "filter3"
+		}
 	]%}
 
 	<div class="portfolio">
 		<div class="portfolio__inner">
 
 			{% for work in works %}
-				<div class="portfolio__item">
+				<div class="portfolio__item js-portfolio {{work.filter}} show">
 					<div class="portfolio__item-outer">
 						<div class="portfolio__item-inner">
 							<div class="portfolio__item-info">

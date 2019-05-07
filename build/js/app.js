@@ -78,56 +78,91 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)(document).ready(function () {
 
-	var urlPage = window.location.href;
-	var mainMenuItem = (0, _jquery2.default)('.js-mm-item');
-	var body = (0, _jquery2.default)('body');
-	var footer = (0, _jquery2.default)('.js-footer');
-	var mainMenu = (0, _jquery2.default)('.js-mm');
-	var mainMenuToggle = (0, _jquery2.default)('.js-mm-toggle');
+  var urlPage = window.location.href;
+  var mainMenuItem = (0, _jquery2.default)('.js-mm-item');
+  var body = (0, _jquery2.default)('body');
+  var footer = (0, _jquery2.default)('.js-footer');
+  var mainMenu = (0, _jquery2.default)('.js-mm');
+  var mainMenuToggle = (0, _jquery2.default)('.js-mm-toggle');
+  var filterBar = (0, _jquery2.default)('.js-filter');
 
-	mainMenuItem.each(function () {
-		if (urlPage == this.href) {
-			(0, _jquery2.default)(this).addClass('active');
-		}
-	});
+  mainMenuItem.each(function () {
+    if (urlPage == this.href) {
+      (0, _jquery2.default)(this).addClass('active');
+    }
+    if (urlPage.indexOf('index.html') > -1) {
+      filterBar.css('display', 'block');
+    } else {
+      filterBar.css('display', 'none');
+    }
+  });
 
-	mainMenuToggle.click(function () {
-		mainMenu.slideToggle();
-	});
+  mainMenuToggle.click(function () {
+    mainMenu.slideToggle();
+  });
 
-	// // ----------------ScrollWidth-------------------
+  if ((0, _jquery2.default)(window).width() < 768) {
+    body.css('padding-bottom', footer.height());
+  } else {
+    body.css('padding-bottom', 0);
+  }
 
-	// 	var div = document.createElement('div');
+  (0, _jquery2.default)(window).resize(function () {
 
-	// 	div.style.overflowY = 'scroll';
-	// 	div.style.width = '50px';
-	// 	div.style.height = '50px';
-	// 	div.style.visibility = 'hidden';
+    if ((0, _jquery2.default)(window).width() < 768) {
+      body.css('padding-bottom', footer.height());
+    } else {
+      body.css('padding-bottom', 0);
+    }
 
-	// 	document.body.appendChild(div);
-	// 	var scrollWidth = div.offsetWidth - div.clientWidth;
-	// 	document.body.removeChild(div);
+    if ((0, _jquery2.default)(window).width() > 768 && mainMenu.is(':hidden')) {
+      mainMenu.removeAttr('style');
+    }
+  });
 
-	// // -----------------------------------------------
+  //------------------Filter---------------------------
 
-	if ((0, _jquery2.default)(window).width() < 768) {
-		body.css('padding-bottom', footer.height());
-	} else {
-		body.css('padding-bottom', 0);
-	}
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("js-filter-btn");
+  var x = document.getElementsByClassName("js-portfolio");
 
-	(0, _jquery2.default)(window).resize(function () {
+  function w3AddClass(element, name) {
+    var arr1 = element.className.split(" ");
+    var arr2 = name.split(" ");
+    for (var i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
 
-		if ((0, _jquery2.default)(window).width() < 768) {
-			body.css('padding-bottom', footer.height());
-		} else {
-			body.css('padding-bottom', 0);
-		}
+  function w3RemoveClass(element, name) {
+    var arr1 = element.className.split(" ");
+    var arr2 = name.split(" ");
+    for (var i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
 
-		if ((0, _jquery2.default)(window).width() > 768 && mainMenu.is(':hidden')) {
-			mainMenu.removeAttr('style');
-		}
-	});
+  var _loop = function _loop(i) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
+      for (var j = 0; j < x.length; j++) {
+        w3RemoveClass(x[j], "show");
+        if (x[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(x[j], "show");
+      }
+    });
+  };
+
+  for (var i = 0; i < btns.length; i++) {
+    _loop(i);
+  }
 });
 
 /***/ }),

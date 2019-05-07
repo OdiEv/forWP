@@ -14,12 +14,12 @@
 ]%}
 
 {% set filters = [
+	{"name": "all"},
 	{"name": "filter1"},
 	{"name": "filter2"},
 	{"name": "filter3"},
 	{"name": "filter4"},
-	{"name": "filter5"},
-	{"name": "filter6"}
+	{"name": "filter5"}
 ]%}
 
 <div class="sidebar">
@@ -47,16 +47,16 @@
 		</nav>
 		<!-- /.sidebar__logo -->
 
-		<div class="sidebar__filter">
+		<div class="sidebar__filter js-filter">
 			<div class="filter">
 				<h4 class="h4">
 					Filter <i class="icon-th-large"></i>
 				</h4>
-				<ul class="filter__inner">
-					{% for li in filters %}
-						<li class="filter__item">{{li.name}}</li>
+				<div class="filter__inner" id="myBtnContainer">
+					{% for btn in filters %}
+						<button class="filter__item js-filter-btn" data-filter="{{btn.name}}">{{btn.name}}</button>
 					{% endfor %}
-				</ul>
+				</div>
 			</div>
 		</div>
 		<!-- /.sidebar__filter -->
