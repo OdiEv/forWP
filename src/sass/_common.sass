@@ -19,3 +19,16 @@ img
 	background-color: $color_bg-2
 	box-shadow: 0 0 20px 0 $color_bg-2
 	z-index: 20
+
+@keyframes fadeIn 
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+.fade-in
+  opacity: 0
+  animation: fadeIn ease-in 1
+  animation-fill-mode: forwards
+  animation-duration: 0.1s
+  animation-delay: 0.1s
