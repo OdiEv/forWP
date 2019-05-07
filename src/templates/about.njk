@@ -32,6 +32,34 @@ title: Company Name | About
 		 "position": "Web Developer"
 		}
 	]%}
+	
+	{% set skills = [
+		{"name": "Website Design",
+		 "percent": "89%",
+		 "namebar": "skillbar-1"
+		},
+		{"name": "Website Development",
+		 "percent": "97%",
+		 "namebar": "skillbar-2"
+		},
+		{"name": "Plugins",
+		 "percent": "85%",
+		 "namebar": "skillbar-3"
+		},
+		{"name": "Front end",
+		 "percent": "75%",
+		 "namebar": "skillbar-4"
+		}
+	]%}
+
+	{% set services = [
+		{"name": "Web Design"},
+		{"name": "Photography"},
+		{"name": "Plugin Development"},
+		{"name": "Front end"},
+		{"name": "Design from Scretch"},
+		{"name": "Website Maintenance"}
+	]%}
 
 	<div class="about">
 		<div class="about__inner">
@@ -92,7 +120,51 @@ title: Company Name | About
 			<!-- /.about__column -->
 
 			<div class="about__column">
-				
+
+				<div class="about__skills">
+					<h3 class="h3">
+						Our Skills
+					</h3>
+					{% for skill in skills %}
+						<p class="skill">
+							{{skill.name}}<span class="skill__percent">{{skill.percent}}</span>
+						</p>
+						<div class="skillbar">
+							<div class="skillbar__inner {{skill.namebar}}"></div>
+						</div>
+					{% endfor %}
+					</div>
+				<!-- /.about__skills -->
+
+				<div class="about__testimonials">
+					<h3 class="h3">
+						Testimonials
+					</h3>
+					<div class="about__review">
+						<div class="about__review-block">
+							<img src="img/staff_2.jpg" alt="staff" class="about__review-photo">
+							<p class="about__review-name">Collis Ta’eed - CEO at Envato</p>
+						</div>
+						<!-- /.about__review-block -->
+						<p class="about__review-text">
+							Sollicitudin lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.
+						</p>
+					</div>
+					<!-- /.about__review -->
+				</div>
+				<!-- /.about__testimonials -->
+
+				<div class="about__services">
+					<h3 class="h3">
+						Services
+					</h3>
+					<ul>
+						{% for service in services %}
+							<li class="about__services-item">{{service.name}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<!-- /.about__services -->
 			</div>
 			<!-- /.about__column -->
 		</div>
