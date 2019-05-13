@@ -17,7 +17,11 @@ $(document).ready( function () {
 		if (urlPage.indexOf('index.html') > -1) {
 			filterBar.css('display', 'block');
 		} else {
-			filterBar.css('display', 'none');
+			if (urlPage.indexOf('.html') > -1) {
+				filterBar.css('display', 'none');
+			} else {
+				filterBar.css('display', 'block');
+			}
 		}
 	});
 
