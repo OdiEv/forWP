@@ -11,9 +11,6 @@ $(document).ready( function () {
 	const filterBar = $('.js-filter');
 
 	mainMenuItem.each(function() {
-		if (urlPage == (this.href)) {
-			$(this).addClass('active');
-		}
 		if (urlPage.indexOf('index.html') > -1) {
 			filterBar.css('display', 'block');
 		} else {
@@ -53,11 +50,11 @@ $(document).ready( function () {
   
   const btnContainer = document.getElementById("myBtnContainer");
   const btns = btnContainer.getElementsByClassName("js-filter-btn");
-  const x = document.getElementsByClassName("js-portfolio");
+  const portfolio = document.getElementsByClassName("js-portfolio");
 
   function w3AddClass(element, name) {
     const arr1 = element.className.split(" ");
-    const arr2= name.split(" ");
+    const arr2 = name.split(" ");
     for (let i = 0; i < arr2.length; i++) {
       if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
     }
@@ -80,9 +77,9 @@ $(document).ready( function () {
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
       if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
-      for (let j = 0; j < x.length; j++) {
-        w3RemoveClass(x[j], "show");
-        if (x[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(x[j], "show")
+      for (let j = 0; j < portfolio.length; j++) {
+        w3RemoveClass(portfolio[j], "show");
+        if (portfolio[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(portfolio[j], "show")
       }
     });
   }

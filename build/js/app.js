@@ -87,9 +87,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var filterBar = (0, _jquery2.default)('.js-filter');
 
   mainMenuItem.each(function () {
-    if (urlPage == this.href) {
-      (0, _jquery2.default)(this).addClass('active');
-    }
     if (urlPage.indexOf('index.html') > -1) {
       filterBar.css('display', 'block');
     } else {
@@ -128,7 +125,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("js-filter-btn");
-  var x = document.getElementsByClassName("js-portfolio");
+  var portfolio = document.getElementsByClassName("js-portfolio");
 
   function w3AddClass(element, name) {
     var arr1 = element.className.split(" ");
@@ -157,9 +154,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       current[0].className = current[0].className.replace(" active", "");
       this.className += " active";
       if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
-      for (var j = 0; j < x.length; j++) {
-        w3RemoveClass(x[j], "show");
-        if (x[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(x[j], "show");
+      for (var j = 0; j < portfolio.length; j++) {
+        w3RemoveClass(portfolio[j], "show");
+        if (portfolio[j].className.indexOf(btns[i].dataset.filter) > -1) w3AddClass(portfolio[j], "show");
       }
     });
   };

@@ -14,7 +14,9 @@
 ]%}
 
 {% set filters = [
-	{"name": "all"},
+	{"name": "all",
+	 "active": "active"
+	},
 	{"name": "filter1"},
 	{"name": "filter2"},
 	{"name": "filter3"},
@@ -54,7 +56,7 @@
 				</h4>
 				<div class="filter__inner" id="myBtnContainer">
 					{% for btn in filters %}
-						<button class="filter__item js-filter-btn" data-filter="{{btn.name}}">{{btn.name}}</button>
+						<button class="filter__item js-filter-btn {{btn.active}}" data-filter="{{btn.name}}">{{btn.name}}</button>
 					{% endfor %}
 				</div>
 			</div>
