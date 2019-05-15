@@ -51,7 +51,7 @@
 		text-transform: uppercase
 		z-index: 1
 		+g(lighten(#000, 20%), lighten(#000, 25%))
-		&.active
+		&.active-menu
 			+g(darken($color_main, 20%), darken($color_main, 25%))
 		&:before
 			content: ''
@@ -91,6 +91,7 @@
 		display: flex
 		flex-direction: column
 		flex-wrap: wrap
+		align-items: flex-end
 		+r(768)
 			flex-direction: row
 	&__item
@@ -104,7 +105,7 @@
 		transition: color 0.2s ease-out
 		&:hover
 			color: #fff
-		&.active
+		&.active-filter
 			color: #fff
 		+r(768)
 			margin-left: 5px

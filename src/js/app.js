@@ -11,6 +11,9 @@ $(document).ready( function () {
 	const filterBar = $('.js-filter');
 
 	mainMenuItem.each(function() {
+		if (urlPage == (this.href)) {
+      $(this).addClass('active-menu');
+		}
 		if (urlPage.indexOf('index.html') > -1) {
 			filterBar.css('display', 'block');
 		} else {
@@ -73,9 +76,9 @@ $(document).ready( function () {
 
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
-      const current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
+      const current = document.getElementsByClassName("active-filter");
+      current[0].className = current[0].className.replace(" active-filter", "");
+      this.className += " active-filter";
       if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
       for (let j = 0; j < portfolio.length; j++) {
         w3RemoveClass(portfolio[j], "show");

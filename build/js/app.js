@@ -87,6 +87,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var filterBar = (0, _jquery2.default)('.js-filter');
 
   mainMenuItem.each(function () {
+    if (urlPage == this.href) {
+      (0, _jquery2.default)(this).addClass('active-menu');
+    }
     if (urlPage.indexOf('index.html') > -1) {
       filterBar.css('display', 'block');
     } else {
@@ -150,9 +153,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   var _loop = function _loop(i) {
     btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
+      var current = document.getElementsByClassName("active-filter");
+      current[0].className = current[0].className.replace(" active-filter", "");
+      this.className += " active-filter";
       if (btns[i].dataset.filter == "all") btns[i].dataset.filter = "";
       for (var j = 0; j < portfolio.length; j++) {
         w3RemoveClass(portfolio[j], "show");
