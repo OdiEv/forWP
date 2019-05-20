@@ -1,0 +1,120 @@
+.contact
+	margin-left: 300px
+	+r(768)
+		margin-left: 0
+	&__inner
+		position: relative
+		height: 100vh
+	&__map
+		width: 100%
+		height: 100%
+	&__info
+		max-width: 783px
+		position: absolute
+		top: 25px
+		left: 25px
+		right: 25px
+		background-color: #fff
+		+r(1200)
+			max-width: 650px
+			top: 15px
+			left: 15px
+			right: 15px
+		+r(768)
+			max-width: 100%
+		+r(480)
+			top: 10px
+			left: 10px
+			right: 10px
+		&-inner
+			padding: 25px
+			+r(480)
+				padding: 15px
+			.h3
+				font-size: 24px
+				line-height: 26px
+				font-weight: 300
+				color: #000
+			p
+				margin: 10px 0 25px
+				font-size: 18px
+				line-height: 30px
+				font-weight: 300
+				color: #a3a3a3
+				+r(480)
+					margin: 5px 0 10px
+		&-message
+			padding-top: 20px
+			border-top: 1px solid #eaeaea
+			+r(480)
+				padding-top: 10px
+			.h3
+				margin-bottom: 20px
+				+r(480)
+					margin-bottom: 10px
+
+.form_contact
+	display: flex
+	justify-content: space-between
+	+r(992)
+		flex-direction: column
+	&__col
+		width: 49.3%
+		display: flex
+		flex-direction: column
+		+r(992)
+			width: 100%
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+	&__label
+		position: relative
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	&__icon
+		position: absolute
+		top: 50%
+		left: 15px
+		transform: translateY(-50%)
+		display: flex
+		width: 32px
+		height: 32px
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		border: 1px solid #1ab5b3
+	&__img
+		color: #1ab5b3
+	&__input
+		width: 100%
+		height: 59px
+		padding: 0 10px 0 77px
+		font-family: $roboto
+		border: 1px solid #1ab5b3
+		+placeholder
+			font-family: $roboto
+			font-size: 14px
+			font-weight: 300
+			color: #848484
+	&__message
+		margin-bottom: 10px
+		padding: 16px
+		height: 128px
+		font-family: $roboto
+		border: 1px solid #1ab5b3
+		resize: none
+		+placeholder
+			font-family: $roboto
+			font-size: 14px
+			font-weight: 300
+			color: #848484
+		
+.btn
+	width: 100%
+	height: 59px
+	font-size: 14px
+	font-weight: 300
+	color: #fff
+	text-transform: uppercase
+	background-color: #1ab5b3
