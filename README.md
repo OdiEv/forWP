@@ -1,7 +1,7 @@
 Gulp Boilerplate for generic CSS/HTML/JS development
 =============
 
-Based on nunjucks, sass, awebpack
+Based on nunjucks, sass, webpack
 
 Structure
 =============
