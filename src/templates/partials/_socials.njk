@@ -1,23 +1,30 @@
 {% set socials = [
 	{"name": "flickr",
+	 "faname": "fab fa-flickr",
 	 "href": "#"
 	},
 	{"name": "gplus",
+	 "faname": "fab fa-google-plus-g",
 	 "href": "#"
 	},
 	{"name": "twitter",
+	 "faname": "fab fa-twitter",
 	 "href": "#"
 	},
 	{"name": "pinterest",
+	 "faname": "fab fa-pinterest-p",
 	 "href": "#"
 	},
 	{"name": "dribbble",
+	 "faname": "fab fa-dribbble",
 	 "href": "#"
 	},
 	{"name": "behance",
+	 "faname": "fab fa-behance",
 	 "href": "#"
 	},
 	{"name": "facebook",
+	 "faname": "fab fa-facebook-f",
 	 "href": "#"
 	}
 ]%}
@@ -25,7 +32,7 @@
 <div class="socials">
 	{% for social in socials %}
 		<a class="socials__item socials__item-{{social.name}}" href={{social.href}}>
-			<i class="icon-{{social.name}}"></i>
+			<i class="{{social.faname}}"></i>
 		</a>
 	{% endfor %}
 </div>

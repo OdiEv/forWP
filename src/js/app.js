@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'slick-carousel';
 
 $(document).ready( function () {
 
@@ -86,4 +87,15 @@ $(document).ready( function () {
       }
     });
   }
+
+  // ----------Slider----------------------------------------
+  const workSlider = $('.js-slider-work');
+
+  workSlider.slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    arrows: false
+  });
+
 });

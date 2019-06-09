@@ -12,8 +12,9 @@
     "type": "git",
     "url": "https://github.com/hraboviyvadim/gulp-boilerplate"
   },
-  "homepage":"https://OdiEv.github.io/forWP",
+  "homepage": "https://OdiEv.github.io/forWP",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "autoprefixer": "7.1.2",
     "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
@@ -58,6 +59,7 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
-    "object-fit": "^0.4.3"
+    "object-fit": "^0.4.3",
+    "slick-carousel": "^1.8.1"
   }
 }

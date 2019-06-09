@@ -48,8 +48,8 @@ title: Company Name
 		}
 	]%}
 
-	<div class="portfolio">
-		<div class="portfolio__inner">
+	<div class="wrapper">
+		<div class="portfolio">
 
 			{% for work in works %}
 				<div class="portfolio__item js-portfolio {{work.filter}} show">
@@ -59,7 +59,7 @@ title: Company Name
 								<h4 class="h4">Cool App Design</h4>
 								<p>development, mobile</p>
 								<div class="portfolio__item-click">
-									<i class="icon-right-big"></i>
+									<i class="fas fa-arrow-right"></i>
 								</div>				
 							</div>
 							<!-- /.portfolio__info -->
@@ -73,8 +73,8 @@ title: Company Name
 			{% endfor %}
 			
 		</div>
-		<!-- /.portfolio__inner -->
+		<!-- /.portfolio -->
 	</div>
-	<!-- /.portfolio -->
+	<!-- /.wrapper -->
 
 {% endblock %}

@@ -1,0 +1,56 @@
+---
+title: Company Name | Work
+---
+
+{% extends "./layouts/_layout.njk" %}
+
+{% block content %}
+
+	{% set slider = [
+		{"src": "work_1.jpg"},
+		{"src": "work_2.jpg"},
+		{"src": "work_3.jpg"},
+		{"src": "work_4.jpg"}
+	]%}	
+
+	<div class="wrapper wrapper-post">
+		<div class="work">
+			
+			<div class="column">
+
+				<div class="work__slider js-slider-work">
+					{% for work in slider %}
+						<div class="work__slider-slide">
+							<img class="work__slider-photo" src="img/{{work.src}}" alt="work">
+						</div>
+						<!-- /.work__slider-slide -->
+					{% endfor %}
+				</div>
+				<!-- /.work__image-slider -->
+				
+				<div class="work__text">
+					<h3 class="h3">
+						Heavy Sand - Creative Photography
+					</h3>
+					<p>
+						Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+					</p>
+					<p>
+						Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. 
+					</p>
+				</div>
+				<!-- /.work__text -->
+				
+			<!-- /.column -->
+
+			<div class="column">
+				
+			</div>
+			<!-- /.column -->
+		
+		</div>
+		<!-- /.work -->
+	</div>
+	<!-- /.wrapper -->
+
+{% endblock %}

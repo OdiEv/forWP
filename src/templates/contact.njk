@@ -6,8 +6,8 @@ title: Company Name | Contact
 
 {% block content %}
 
-	<div class="contact">
-		<div class="contact__inner">
+	<div class="wrapper">
+		<div class="contact">
 			<iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20444.11037616172!2d14.424307273321602!3d50.072815328534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1558291346513!5m2!1suk!2sua" frameborder="0" style="border:0" allowfullscreen></iframe>
 			<div class="contact__info">
 				<div class="contact__info-inner">
@@ -21,19 +21,19 @@ title: Company Name | Contact
 							<div class="form_contact__col">
 								<label class="form_contact__label" for="name">
 									<span class="form_contact__icon">
-										<i class="form_contact__img icon-home"></i>
+										<i class="form_contact__img fas fa-user"></i>
 									</span>
 									<input class="form_contact__input" id="name" type="text" placeholder="Name" autocomplete="off" autofocus>
 								</label>
 								<label class="form_contact__label" for="email">
 									<span class="form_contact__icon">
-										<i class="form_contact__img icon-mail"></i>
+										<i class="form_contact__img far fa-envelope"></i>
 									</span>
 									<input class="form_contact__input" id="email" type="email" placeholder="Email" autocomplete="off">
 								</label>
 								<label class="form_contact__label" for="website">
 									<span class="form_contact__icon">
-										<i class="form_contact__img icon-sitemap"></i>
+										<i class="form_contact__img fas fa-sitemap"></i>
 									</span>
 									<input class="form_contact__input" id="website" type="text" placeholder="Website" autocomplete="off">
 								</label>
@@ -53,8 +53,8 @@ title: Company Name | Contact
 			</div>
 			<!-- /.contact__info -->
 		</div>
-		<!-- /.contact__inner -->
+		<!-- /.contact -->
 	</div>
-	<!-- /.contact -->
+	<!-- /.wrapper -->
 
 {% endblock %}
