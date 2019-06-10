@@ -50,7 +50,7 @@ $(document).ready( function () {
 
   });
 
-//------------------Filter---------------------------
+// Filter
   
   const btnContainer = document.getElementById("myBtnContainer");
   const btns = btnContainer.getElementsByClassName("js-filter-btn");
@@ -88,7 +88,7 @@ $(document).ready( function () {
     });
   }
 
-  // ----------Slider----------------------------------------
+  // Slider
   const workSlider = $('.js-slider-work');
 
   workSlider.slick({
@@ -98,4 +98,12 @@ $(document).ready( function () {
     arrows: false
   });
 
+  // Quick Contact
+
+  const qcontact = $('.js-qcontact');
+  const qcontactInfo = $('.js-qcontact-info');
+
+  qcontact.click(function(){
+    qcontactInfo.toggleClass("qcontact-toggle");
+  });
 });

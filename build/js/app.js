@@ -10731,7 +10731,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     }
   });
 
-  //------------------Filter---------------------------
+  // Filter
 
   var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("js-filter-btn");
@@ -10775,7 +10775,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _loop(i);
   }
 
-  // ----------Slider----------------------------------------
+  // Slider
   var workSlider = (0, _jquery2.default)('.js-slider-work');
 
   workSlider.slick({
@@ -10783,6 +10783,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     infinite: true,
     speed: 300,
     arrows: false
+  });
+
+  // Quick Contact
+
+  var qcontact = (0, _jquery2.default)('.js-qcontact');
+  var qcontactInfo = (0, _jquery2.default)('.js-qcontact-info');
+
+  qcontact.click(function () {
+    qcontactInfo.toggleClass("qcontact-toggle");
   });
 });
 
