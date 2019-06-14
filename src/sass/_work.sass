@@ -1,12 +1,15 @@
 .work
-	display: flex
-	flex-wrap: wrap
-	padding: 30px 0
-	background-color: #fff
-	+r(1400)
-		padding: 20px 0
 	&__slider
-		width: 721px
+		width: 33vw
+		margin: 0 auto
+		+r(1200)
+			width: 60vw
+		+r(992)
+			width: 48vw
+		+r(768)
+			width: 85vw
+		+r(480)
+			width: 80vw
 		&-slide
 			position: absolute
 			top: 0
@@ -21,6 +24,9 @@
 			text-align: right
 			right: 27px
 			bottom: 30px
+			+r(768)
+				right: 7px
+				bottom: 10px
 			li.slick-active button
 				background: #40bcba
 				border: 1px solid #6b6b6b
@@ -32,18 +38,144 @@
 				border: 1px solid #fff
 		.slick-slide
 			position: relative
-			height: 560px
+			padding-top: 8%
 		//--------------------
 	&__text
-		padding-top: 20px
+		margin-top: 20px
+		padding-bottom: 30px
+		border-bottom: 1px solid $color_bg-2
+		+r(480)
+			padding-bottom: 15px
 		.h3
 			margin-bottom: 20px
+			+r(480)
+				margin-bottom: 10px
 		p
 			margin-bottom: 40px
 			font-size: 18px
 			line-height: 30px
-			font-weight: 100
+			font-weight: 300
 			color: #a3a3a3
+			+r(480)
+				margin-bottom: 15px
 			&:last-child
 				margin-bottom: 0
-		
+	&__projects
+		padding-top: 30px
+		+r(480)
+				padding-top: 20px
+		.h3
+			padding-bottom: 20px
+			+r(480)
+				padding-bottom: 10px
+	&__info
+		margin-bottom: 30px
+		.h3
+			margin-bottom: 20px
+		&-item
+			display: flex
+			align-items: center
+			margin-bottom: 15px
+			padding-bottom: 15px
+			border-bottom: 1px solid $color_bg-2
+			&:last-child
+				margin-bottom: 0
+		&-circle
+			position: relative
+			width: 32px
+			height: 32px
+			border: 1px solid $color_main
+			border-radius: 50%
+		&-icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: $color_main
+			font-size: 12px
+		&-text
+			margin-left: 15px
+			font-size: 14px
+			color: #848484
+	&__tags
+		margin-bottom: 20px
+	&__gallery
+		margin-bottom: 20px
+
+.projects
+	display: flex
+	+r(480)
+		flex-direction: column
+	&__item
+		flex: 0 0 33.33%
+		padding: 3px
+		cursor: pointer
+		&-outer
+			position: relative
+			padding-top: 75.8%
+			+r(480)
+				padding-top: 60%
+		&-inner
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+		&-image
+			width: 100%
+			height: 100%
+
+.tags
+	display: flex
+	flex-wrap: wrap
+	margin-top: 20px
+	+r(768)
+		justify-content: center
+
+.tag
+	height: 38px
+	margin-right: 10px
+	margin-bottom: 10px
+	padding: 0 18px
+	color: #a3a3a3
+	background: #fff
+	border-top: 1px solid $color_bg-1
+	border-bottom: 1px solid $color_bg_1
+	border-right: 1px solid $color_bg-2
+	border-left: 1px solid $color_bg-2
+	border-radius: 10px
+	transition: all 0.3s ease-out
+	&:hover
+		background: lighten($color_main, 20%)
+		color: #fff
+
+.gallery_work
+	display: flex
+	flex-wrap: wrap
+	margin-top: 15px
+	+r(768)
+		justify-content: center
+	&__block
+		width: 78px
+		height: 78px
+		margin-right: 12px
+		margin-bottom: 12px
+	&__outer
+		padding-top: 100%
+		position: relative
+	&__inner
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	&__image
+		width: 100%
+		height: 100%
+
+.features_work
+	margin-top: 10px
+	color: #848484
+	&__item
+		font-size: 14px
+		line-height: 30px

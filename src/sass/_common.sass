@@ -17,7 +17,7 @@ img
 .h3
 	color: #000
 	font-size: 24px
-	font-weight: 100
+	font-weight: 300
 
 .out
 	position: relative
@@ -35,18 +35,30 @@ img
 			padding: 20px
 		+r(768)
 			padding: 15px
+			
+.columns
+	display: flex
+	padding: 30px 0
+	background-color: #fff
+	+r(1400)
+		padding: 20px 0
+	+r(1200)
+		flex-direction: column
 
 .column
 	flex: 0 0 50%
 	padding: 0 30px
 	&:first-child
-		border-right: 1px solid #e5e5e5
+		border-right: 1px solid $color_bg-2
 		+r(1200)
 			border: none
+			margin-bottom: 20px
 	+r(1400)
 		padding: 0 20px
 	+r(1200)
 		flex: 0 0 100%
+	+r(768)
+		padding: 0 10px
 			
 @keyframes fadeIn 
 	0%

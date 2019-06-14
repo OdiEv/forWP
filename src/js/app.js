@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import lightbox from 'lightbox2';
 
 $(document).ready( function () {
 
@@ -106,4 +107,11 @@ $(document).ready( function () {
   qcontact.click(function(){
     qcontactInfo.toggleClass("qcontact-toggle");
   });
+
+  //lightbox
+  lightbox.option({
+    'resizeDuration': 200,
+    'disableScrolling': true,
+    'positionFromTop': 150
+  })
 });
