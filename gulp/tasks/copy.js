@@ -12,8 +12,10 @@ gulp.task('copy', function(done) {
    .pipe(gulp.dest(config.dest.root+'video/'));
   gulp.src(config.src.vendors+'**/*.*')
    .pipe(gulp.dest(config.dest.vendors));
-  gulp.src(config.node.fafree+'webfonts/*.*')
+  gulp.src(config.nodeModuls.fafree+'webfonts/*.*')
    .pipe(gulp.dest(config.dest.css+'webfonts/'));
+  gulp.src(config.nodeModuls.lbImages+'images/*.*')
+   .pipe(gulp.dest(config.dest.img));
   done();
 });
 
@@ -21,7 +23,6 @@ gulp.task('copy:watch', function(done) {
     gulp.watch(config.src.img+'*', gulp.series('copy'));
     gulp.watch(config.src.vendors+'*', gulp.series('copy'));
     gulp.watch(config.src.root+'fonts/*', gulp.series('copy'));
-    gulp.watch(config.node.fafree+'webfonts/*', gulp.series('copy'));
     done();
 });
 

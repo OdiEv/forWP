@@ -14,8 +14,9 @@ module.exports = {
     // path to svg sources for sprite:svg task
     iconsSvg: 'src/icons'    
   },
-  node: {
-    fafree: 'node_modules/@fortawesome/fontawesome-free/'
+  nodeModuls: {
+    fafree: 'node_modules/@fortawesome/fontawesome-free/',
+    lbImages: 'node_modules/lightbox2/src/'
   },
   dest: {
     root    : 'build/',
