@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lightbox2": "^2.11.0",
     "object-fit": "^0.4.3",
     "slick-carousel": "^1.8.1"
